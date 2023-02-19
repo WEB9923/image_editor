@@ -1,0 +1,156 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    list-style-type:none;
+    text-decoration:none;
+    font-family: sans-serif;
+}
+
+:root{
+    --background: #373737;
+    --color: #9a9595;
+    --iconSize:25px;
+    --medium:20px;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+}
+body .container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background);
+}
+.container{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding: 50px;
+}
+.filters,
+.image{
+    width: 50%;
+    height :100%;
+}
+.filters{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.filters ul{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+.filters ul li{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.filters ul li label{
+    color: var(--color);
+    font-size: var(--medium);
+    text-transform: capitalize;
+}
+.filters ul li input{
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    cursor: pointer;
+    background: #2d2d2d;
+    border-radius: 3px;
+}
+.filters ul li input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #181717;
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
+}
+.filters ul li input::-moz-range-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #181717;
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
+}
+.filters ul li:last-child{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 20px;
+    align-items: center;
+}
+.filters ul li:last-child a{
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: var(--medium);
+    cursor: pointer;
+    padding: 12px 25px;
+}
+.filters ul li:last-child a i{
+    font-size: var(--iconSize);
+}
+#download{
+    color: #3fab5e;
+    border: dashed 1px #3fab5e;
+}
+#reset{
+    color: #608cc4;
+    border: dashed 1px #608cc4;
+}
+
+
+
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.image .img-box img{
+    width: 100%;
+    border-radius: 10px;
+}
+.upload{
+    color: var(--color);
+}
+.upload label{
+    padding: 12px 25px;
+    border: dashed 1px var(--color);
+    cursor:pointer;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: var(--medium);
+}
+.upload label i{
+    font-size: var(--iconSize);
+}
+.upload input{
+    display: none;
+}
+
+
+@media screen and (max-width:1100px){
+    .container{
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+    .filters,
+    .image{
+        width: 100%;
+        height :100%;
+    }
+}
